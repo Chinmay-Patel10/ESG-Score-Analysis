@@ -7,7 +7,10 @@ import altair as alt
 
 st.title("ESG and Financial Performance Dashboard")
 
-Top_100_Tech_Final = pd.read_excel("Top_100_Tech_Final.xlsx")
+url = "https://github.com/Chinmay-Patel10/ESG-Score-Analysis/raw/refs/heads/Projects/ESG_Analysis_Streamlit/Top_100_Tech_Final.xlsx"
+
+# Read the file
+Top_100_Tech_Final = pd.read_excel(url, engine='openpyxl')
 with st.expander("Data Preview"):
     st.dataframe(Top_100_Tech_Final)
 #st.divider()
